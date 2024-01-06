@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { IoIosArrowForward, IoMdArrowForward } from "react-icons/io";
 import { useState } from "react";
 import ProductSubMenu from "../ProductSubMenu/ProductSubMenu";
+import SolutionSubMenu from "../SolutionSubMenu/SolutionSubMenu";
 
 const Navbar = () => {
   const [activeProduct, setActiveProduct] = useState("btn1");
@@ -41,8 +42,11 @@ const Navbar = () => {
                   handleMouseLeave={handleMouseLeave}
                 ></ProductSubMenu>
               </li>
-              <li>
-                <button className="font-semibold">Solutions</button>
+              <li className="relative group/solutions px-4 py-2 rounded-full">
+                <button className="font-semibold hover:opacity-50 duration-300">
+                  Solutions
+                </button>
+                <SolutionSubMenu></SolutionSubMenu>
               </li>
               <li className="font-semibold">
                 <button>Developers</button>

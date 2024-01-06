@@ -1,6 +1,5 @@
 import { IoRocket } from "react-icons/io5";
 import {
-  Bs123,
   BsCarFront,
   BsCart,
   BsCoin,

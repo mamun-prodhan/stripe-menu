@@ -3,6 +3,7 @@ import { IoIosArrowForward, IoMdArrowForward } from "react-icons/io";
 import { useState } from "react";
 import ProductSubMenu from "../ProductSubMenu/ProductSubMenu";
 import SolutionSubMenu from "../SolutionSubMenu/SolutionSubMenu";
+import ResourcesSubMenu from "../ResourcesSubMenu/ResourcesSubMenu";
 
 const Navbar = () => {
   const [activeProduct, setActiveProduct] = useState("btn1");
@@ -51,11 +52,16 @@ const Navbar = () => {
               <li className="font-semibold">
                 <button>Developers</button>
               </li>
-              <li className="font-semibold">
-                <button>Resources</button>
+              <li className="relative group/resources px-4 py-2 rounded-full">
+                <button className="font-semibold hover:opacity-50 duration-300">
+                  Resources
+                </button>
+                <ResourcesSubMenu></ResourcesSubMenu>
               </li>
               <li className="font-semibold">
-                <button>Pricing</button>
+                <button className="font-semibold hover:opacity-50 duration-300">
+                  Pricing
+                </button>
               </li>
             </ul>
           </nav>

@@ -175,7 +175,7 @@ const ProductSubMenu = ({ activeProduct, handleHover, handleMouseLeave }) => {
   return (
     <div
       onMouseLeave={handleMouseLeave}
-      className="absolute top-14 -left-28 transition group-hover:translate-y-0 opacity-0 invisible group-hover:visible group-hover:opacity-100 duration-300 ease-in-out group-hover:transform z-50 min-w-[900px] h-[900px] transform"
+      className="absolute top-14 -left-28 opacity-0 invisible group-hover:visible group-hover:opacity-100 duration-300 ease-in-out z-50 min-w-[900px] h-[900px]"
     >
       <div className="relative p-2 bg-[#EFF3F9] rounded-xl shadow-xl w-full">
         {/* hovered menu pointer */}

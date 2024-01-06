@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const DevelopersSubMenu = () => {
   return (
-    <div className="absolute top-14 -left-64 opacity-0 invisible group-hover/developers:visible group-hover/developers:opacity-100 duration-300 ease-in-out group-hover/developers:transform z-50 min-w-[700px] h-[900px]">
+    <div className="absolute top-14 -left-64 opacity-0 invisible group-hover/developers:visible group-hover/developers:opacity-100 duration-300 ease-in-out z-50 min-w-[700px] h-[900px]">
       <div className="relative bg-[#EFF3F9] rounded-xl shadow-xl w-full">
         {/* hovered menu pointer */}
         <div className="absolute w-10 h-10 bg-white transform rotate-45 top-0 z-[-1] translate-x-0 transition-transform group-hover/developers:translate-x-[285px] duration-500 ease-in-out rounded-sm"></div>
@@ -120,11 +120,13 @@ export default DevelopersSubMenu;
 // component for menu with icon
 const MenuWithIcon = ({ icon, label }) => {
   return (
-    <div className="flex items-center gap-2 group my-2">
-      <span className="text-gray-400 group-hover:text-gray-800 duration-150">
-        {icon}
-      </span>
-      <p className="text-gray-800 font-semibold">{label}</p>
-    </div>
+    <Link to="/">
+      <div className="flex items-center gap-2 group my-2">
+        <span className="text-gray-400 group-hover:text-gray-800 duration-150">
+          {icon}
+        </span>
+        <p className="text-gray-800 font-semibold">{label}</p>
+      </div>
+    </Link>
   );
 };

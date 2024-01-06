@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 const ProductSubMenus = ({ item }) => {
   const { icon, label, details, route } = item;
   return (
-    <Link
-      to={`${route}`}
-      className="flex items-center gap-4 group/item cursor-default"
-    >
+    <Link to={`${route}`} className="flex items-center gap-4 group/item">
       <div>
         <img src={icon} alt="" />
       </div>

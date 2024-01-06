@@ -1,12 +1,4 @@
 import {
-  BsCart,
-  BsCoin,
-  BsGlobe,
-  BsMagnet,
-  BsMessenger,
-  BsShop,
-} from "react-icons/bs";
-import {
   FaBook,
   FaBookOpen,
   FaBriefcase,
@@ -19,8 +11,6 @@ import {
   FaTag,
   FaUser,
 } from "react-icons/fa";
-import { AiFillPlusSquare, AiFillSafetyCertificate } from "react-icons/ai";
-import { IoIosBriefcase } from "react-icons/io";
 
 const ResourcesSubMenu = () => {
   return (

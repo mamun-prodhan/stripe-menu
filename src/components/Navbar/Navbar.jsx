@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProductSubMenu from "../ProductSubMenu/ProductSubMenu";
 import SolutionSubMenu from "../SolutionSubMenu/SolutionSubMenu";
 import ResourcesSubMenu from "../ResourcesSubMenu/ResourcesSubMenu";
+import DevelopersSubMenu from "../DevelopersSubMenu/DevelopersSubMenu";
 
 const Navbar = () => {
   const [activeProduct, setActiveProduct] = useState("btn1");
@@ -18,7 +19,7 @@ const Navbar = () => {
   return (
     <header>
       {/* header container */}
-      <div className="container mx-auto px-4 py-6 flex items-center gap-8">
+      <div className="container mx-auto px-6 py-6 flex items-center gap-8">
         {/* logo */}
         <div>
           <Link
@@ -49,8 +50,11 @@ const Navbar = () => {
                 </button>
                 <SolutionSubMenu></SolutionSubMenu>
               </li>
-              <li className="font-semibold">
-                <button>Developers</button>
+              <li className="relative group/developers px-4 py-2 rounded-full">
+                <button className="font-semibold hover:opacity-50 duration-300">
+                  Developers
+                </button>
+                <DevelopersSubMenu></DevelopersSubMenu>
               </li>
               <li className="relative group/resources px-4 py-2 rounded-full">
                 <button className="font-semibold hover:opacity-50 duration-300">

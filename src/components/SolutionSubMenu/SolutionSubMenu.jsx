@@ -12,7 +12,6 @@ import {
 } from "react-icons/bs";
 import { AiFillPlusSquare, AiFillSafetyCertificate } from "react-icons/ai";
 import { IoIosBriefcase } from "react-icons/io";
-import { Link } from "react-router-dom";
 import MenuWithIcon from "../MenuWithIcon/MenuWithIcon";
 
 const SolutionSubMenu = () => {

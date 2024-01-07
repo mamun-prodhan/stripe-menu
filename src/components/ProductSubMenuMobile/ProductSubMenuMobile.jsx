@@ -1,6 +1,5 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { IoMdArrowForward } from "react-icons/io";
-import { RiMenuSearchFill } from "react-icons/ri";
 import payments from "../../assets/payments.svg";
 import billing from "../../assets/billing.svg";
 import checkout from "../../assets/checkout.svg";

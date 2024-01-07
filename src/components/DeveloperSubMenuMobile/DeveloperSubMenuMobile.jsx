@@ -8,6 +8,7 @@ import {
 } from "react-icons/io";
 import { Link } from "react-router-dom";
 import MenuWithIcon from "../MenuWithIcon/MenuWithIcon";
+import MenuButtonMobile from "../MenuButtonMobile/MenuButtonMobile";
 
 const DeveloperSubMenuMobile = ({ activeProductMobile, handleClick }) => {
   return (
@@ -49,59 +50,19 @@ const DeveloperSubMenuMobile = ({ activeProductMobile, handleClick }) => {
                   <h4 className="text-gray-500 font-semibold uppercase">
                     Get Started
                   </h4>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Prebuilt checkout
-                  </Link>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Libraries and SDKs
-                  </Link>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    App integrations
-                  </Link>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Code samples
-                  </Link>
+                  <DeveloperMenuLinks text="Prebuilt checkout" />
+                  <DeveloperMenuLinks text="Libraries and SDKs" />
+                  <DeveloperMenuLinks text="App integrations" />
+                  <DeveloperMenuLinks text="Code samples" />
                 </div>
                 <div className="space-y-2">
                   <h4 className="text-gray-500 font-semibold uppercase">
                     Guides
                   </h4>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Accept online payments
-                  </Link>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Manage subscriptions
-                  </Link>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Send payments
-                  </Link>
-                  <Link
-                    to="/"
-                    className="block text-gray-500 hover:text-gray-800"
-                  >
-                    Set up in-person payments
-                  </Link>
+                  <DeveloperMenuLinks text="Accept online payments" />
+                  <DeveloperMenuLinks text="Manage subscriptions" />
+                  <DeveloperMenuLinks text="Send payments" />
+                  <DeveloperMenuLinks text="Set up in-person payments" />
                 </div>
               </div>
             </div>
@@ -149,20 +110,10 @@ const DeveloperSubMenuMobile = ({ activeProductMobile, handleClick }) => {
 
 export default DeveloperSubMenuMobile;
 
-const MenuButtonMobile = ({ label, handleClick }) => {
+const DeveloperMenuLinks = ({ text }) => {
   return (
-    <div
-      onClick={handleClick}
-      className="flex items-center justify-between group py-3"
-    >
-      <div>
-        <h4 className="text-gray-600 font-bold group-hover:text-gray-500">
-          {label}
-        </h4>
-      </div>
-      <div>
-        <IoIosArrowForward className="text-xl text-gray-600 group-hover:text-gray-500" />
-      </div>
-    </div>
+    <Link to="/" className="block text-gray-500 hover:text-gray-800">
+      {text}
+    </Link>
   );
 };

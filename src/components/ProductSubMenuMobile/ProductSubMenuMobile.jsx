@@ -215,7 +215,7 @@ const ProductSubMenuMobile = ({ activeProductMobile, handleClick }) => {
             ))}
           </div>
 
-          <div className="my-10">
+          <div className="mt-20">
             <Link to="/">
               <button className="flex mx-auto items-center gap-2 text-sm ps-3 pe-2 py-1 group font-semibold rounded-full bg-indigo-600 hover:bg-black duration-300">
                 <span>Sign in</span>
@@ -248,7 +248,7 @@ const ProductSubMenuMobile = ({ activeProductMobile, handleClick }) => {
               <ProductSubMenus key={index} item={item} />
             ))}
           </div>
-          <div className="my-10">
+          <div className="mt-20">
             <Link to="/">
               <button className="flex mx-auto items-center gap-2 text-sm ps-3 pe-2 py-1 group font-semibold rounded-full bg-indigo-600 hover:bg-black duration-300">
                 <span>Sign in</span>
@@ -264,7 +264,7 @@ const ProductSubMenuMobile = ({ activeProductMobile, handleClick }) => {
         </div>
       )}
       {activeProductMobile === "btn3" && (
-        <div className=" w-[100%] top-0 right-0 rounded-lg p-4 bg-white absolute">
+        <div className=" w-[100%] h-[600px] top-0 right-0 rounded-lg p-4 bg-white absolute">
           <div>
             <button
               className="flex items-center gap-2 text-indigo-500"
@@ -281,7 +281,7 @@ const ProductSubMenuMobile = ({ activeProductMobile, handleClick }) => {
               <ProductSubMenus key={index} item={item} />
             ))}
           </div>
-          <div className="my-10">
+          <div className="mt-48">
             <Link to="/">
               <button className="flex mx-auto items-center gap-2 text-sm ps-3 pe-2 py-1 group font-semibold rounded-full bg-indigo-600 hover:bg-black duration-300">
                 <span>Sign in</span>

@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <header>
       {/* header container */}
-      <div className="container relative mx-auto px-10 lg:px-6 py-8 lg:py-6 flex items-center justify-between gap-8">
+      <div className="container relative mx-auto px-6 py-8 lg:py-6 flex items-center justify-between gap-8">
         {/* logo */}
         <div>
           <Link
@@ -119,7 +119,9 @@ const Navbar = () => {
           {/* menu toggle button */}
           <div onClick={() => setOpen(!open)} className="">
             {!open && (
-              <AiOutlineMenu className="text-2xl lg:text-3xl  font-bold text-white hover:opacity-50 duration-300"></AiOutlineMenu>
+              <span className="block text-base rounded-full font-bold text-white bg-white bg-opacity-10 hover:bg-opacity-30 duration-300 px-4 py-2 ">
+                <AiOutlineMenu></AiOutlineMenu>
+              </span>
             )}
           </div>
           {/* all menu data */}
@@ -170,6 +172,16 @@ const Navbar = () => {
                       handleClick={handleClick}
                     ></ResourcesSubMenuMobile>
                   </div>
+                  <Link to="/" className="py-3 block">
+                    <h4 className="text-gray-600 font-bold group-hover:text-gray-500">
+                      Contact Sales
+                    </h4>
+                  </Link>
+                  <Link to="/" className="py-3 block">
+                    <h4 className="text-gray-600 font-bold group-hover:text-gray-500">
+                      Pricing
+                    </h4>
+                  </Link>
                 </div>
               </div>
             </div>

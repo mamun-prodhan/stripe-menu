@@ -5,7 +5,7 @@ const ProductSubMenus = ({ item }) => {
   return (
     <Link to={`${route}`} className="flex items-center gap-4 group/item">
       <div>
-        <img src={icon} alt="" />
+        <img className="w-[30px] lg:w-[40px]" src={icon} alt="" />
       </div>
       <div>
         <p className=" font-bold text-gray-500 flex items-center gap-2">

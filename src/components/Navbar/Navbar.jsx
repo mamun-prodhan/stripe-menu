@@ -5,12 +5,20 @@ import ProductSubMenu from "../ProductSubMenu/ProductSubMenu";
 import SolutionSubMenu from "../SolutionSubMenu/SolutionSubMenu";
 import ResourcesSubMenu from "../ResourcesSubMenu/ResourcesSubMenu";
 import DevelopersSubMenu from "../DevelopersSubMenu/DevelopersSubMenu";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import ProductSubMenuMobile from "../ProductSubMenuMobile/ProductSubMenuMobile";
 
 const Navbar = () => {
   const [activeProduct, setActiveProduct] = useState("btn1");
+  const [activeProductMobile, setActiveProductMobile] = useState("");
+  const [open, setOpen] = useState(false);
 
   const handleHover = (btn) => {
     setActiveProduct(btn);
+  };
+
+  const handleClick = (btn) => {
+    setActiveProductMobile(btn);
   };
 
   const handleMouseLeave = () => {
@@ -19,18 +27,18 @@ const Navbar = () => {
   return (
     <header>
       {/* header container */}
-      <div className="container mx-auto px-6 py-6 flex items-center gap-8">
+      <div className="container relative mx-auto px-10 lg:px-6 py-8 lg:py-6 flex items-center justify-between gap-8">
         {/* logo */}
         <div>
           <Link
             to="/"
-            className="text-3xl font-bold text-white hover:opacity-50 duration-300"
+            className="text-2xl lg:text-3xl font-bold text-white hover:opacity-50 duration-300"
           >
             stripe
           </Link>
         </div>
-        {/* menu */}
-        <div className="lg:flex items-center justify-between w-full hidden">
+        {/* menu for desktop screen */}
+        <div className="lg:flex  items-center justify-between w-full hidden">
           {/* drop down buttons */}
           <nav>
             <ul className="flex items-center justify-center gap-8">
@@ -102,6 +110,46 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
+        </div>
+        {/* menu for mobile screen */}
+        <div className="block lg:hidden">
+          {/* menu toggle button */}
+          <div onClick={() => setOpen(!open)} className="">
+            {!open && (
+              <AiOutlineMenu className="text-2xl lg:text-3xl  font-bold text-white hover:opacity-50 duration-300"></AiOutlineMenu>
+            )}
+          </div>
+          {/* all menu data */}
+          {open && (
+            <div className="">
+              <div className="w-[90%] top-5 right-[5%] h-[600px] rounded-lg bg-white absolute">
+                <div className="relative p-4">
+                  <div className="">
+                    <Link
+                      to="/"
+                      className="text-2xl lg:text-3xl font-bold text-indigo-500 hover:opacity-50 duration-300"
+                    >
+                      stripe
+                    </Link>
+                    <AiOutlineClose
+                      onClick={() => setOpen(false)}
+                      className="text-2xl lg:text-3xl font-bold text-gray-800 hover:opacity-50 duration-300 absolute top-4 right-4 z-[1000]"
+                    ></AiOutlineClose>
+                  </div>
+                  {/* products menu div */}
+                  <div>
+                    <p className="text-gray-800 font-bold pt-6 pb-3 border-b-2 border-dotted">
+                      Products
+                    </p>
+                    <ProductSubMenuMobile
+                      activeProductMobile={activeProductMobile}
+                      handleClick={handleClick}
+                    ></ProductSubMenuMobile>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>

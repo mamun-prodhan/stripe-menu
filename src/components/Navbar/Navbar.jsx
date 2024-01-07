@@ -7,6 +7,9 @@ import ResourcesSubMenu from "../ResourcesSubMenu/ResourcesSubMenu";
 import DevelopersSubMenu from "../DevelopersSubMenu/DevelopersSubMenu";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import ProductSubMenuMobile from "../ProductSubMenuMobile/ProductSubMenuMobile";
+import SolutionSubMenuMobile from "../SolutionSubMenuMobile/SolutionSubMenuMobile";
+import DeveloperSubMenuMobile from "../DeveloperSubMenuMobile/DeveloperSubMenuMobile";
+import ResourcesSubMenuMobile from "../ResourcesSubMenuMobile/ResourcesSubMenuMobile";
 
 const Navbar = () => {
   const [activeProduct, setActiveProduct] = useState("btn1");
@@ -122,7 +125,7 @@ const Navbar = () => {
           {/* all menu data */}
           {open && (
             <div className="">
-              <div className="w-[90%] top-5 right-[5%] h-[600px] rounded-lg bg-white absolute">
+              <div className="w-[90%] top-5 right-[5%] rounded-lg bg-white absolute">
                 <div className="relative p-4">
                   <div className="">
                     <Link
@@ -146,19 +149,27 @@ const Navbar = () => {
                       handleClick={handleClick}
                     ></ProductSubMenuMobile>
                   </div>
-                </div>
-                <div className="mt-36">
-                  <Link to="/">
-                    <button className="flex mx-auto items-center gap-2 text-sm ps-3 pe-2 py-1 group font-semibold rounded-full bg-indigo-600 hover:bg-black duration-300">
-                      <span>Sign in</span>
-                      <span className="block group-hover:hidden hover:duration-300">
-                        <IoIosArrowForward />
-                      </span>
-                      <span className="hidden group-hover:block hover:duration-300">
-                        <IoMdArrowForward />
-                      </span>
-                    </button>
-                  </Link>
+                  {/* solutions */}
+                  <div>
+                    <SolutionSubMenuMobile
+                      activeProductMobile={activeProductMobile}
+                      handleClick={handleClick}
+                    ></SolutionSubMenuMobile>
+                  </div>
+                  {/* developers */}
+                  <div>
+                    <DeveloperSubMenuMobile
+                      activeProductMobile={activeProductMobile}
+                      handleClick={handleClick}
+                    ></DeveloperSubMenuMobile>
+                  </div>
+                  {/* resources */}
+                  <div>
+                    <ResourcesSubMenuMobile
+                      activeProductMobile={activeProductMobile}
+                      handleClick={handleClick}
+                    ></ResourcesSubMenuMobile>
+                  </div>
                 </div>
               </div>
             </div>

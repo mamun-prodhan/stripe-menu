@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <header>
       {/* header container */}
-      <div className="container relative mx-auto px-6 py-8 lg:py-6 flex items-center justify-between gap-8">
+      <div className="container relative mx-auto px-10 lg:px-6 py-8 lg:py-6 flex items-center justify-between gap-8">
         {/* logo */}
         <div>
           <Link

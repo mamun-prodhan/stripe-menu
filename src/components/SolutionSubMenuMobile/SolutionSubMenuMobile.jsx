@@ -18,6 +18,7 @@ import {
 } from "react-icons/io";
 import { IoRocket } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import MenuWithIcon from "../MenuWithIcon/MenuWithIcon";
 
 const SolutionSubMenuMobile = ({ activeProductMobile, handleClick }) => {
   return (
@@ -160,19 +161,5 @@ const MenuButtonMobile = ({ label, description, isActive, handleClick }) => {
         <IoIosArrowForward className="text-xl text-gray-600 group-hover:text-gray-500" />
       </div>
     </div>
-  );
-};
-
-// component for menu with icon
-const MenuWithIcon = ({ icon, label }) => {
-  return (
-    <Link to="/">
-      <div className="flex items-center gap-2 group my-2">
-        <span className="text-gray-400 group-hover:text-gray-800 duration-150">
-          {icon}
-        </span>
-        <p className="text-gray-800 font-semibold">{label}</p>
-      </div>
-    </Link>
   );
 };
